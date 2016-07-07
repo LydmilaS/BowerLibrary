@@ -1,0 +1,77 @@
+ul li {
+	background-color: yellow;
+	margin: 20px;
+	list-style-type: none;
+}
+ul {
+	padding: 0;
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+}
+
+input {
+	width: 100%;
+}
+.block1, .block2, .block3 {
+	width: 300px;
+	padding: 20px;
+	float: left;
+	overflow: hidden;
+	margin: 30px 60px;
+	min-height: 460px;
+}
+.block1 {
+	background-color: blue;
+	
+}
+
+.block2 {
+	background-color: red;
+	
+}
+.block3 {
+	background-color: green;
+}
+
+p {
+	border: 1px solid black;
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+	    padding: 5px;
+}
+
+span {
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	display: block;
+}
+
+*{
+        -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
+    [ng-drag]{
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    [ng-drag]{
+        cursor: move;
+    }
+    ul.draggable-objects:after{
+        display: block;
+        content:"";
+        clear:both;
+    }
+ 
+   
+    [ng-drop]{
+        position: relative;
+    }
+
+    [ng-drop] div{
+        position: relative;
+        z-index: 2;
+    }

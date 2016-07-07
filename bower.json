@@ -1,0 +1,23 @@
+{
+  "name": "angular",
+  "description": "A starter project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/angular/angular-phonecat",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "ng-contenteditable-master": ""
+  },
+  "authors": [
+    "Luda <lydmilazoloto@gmail.com>"
+  ],
+  "main": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
