@@ -7,7 +7,11 @@
   "private": true,
   "dependencies": {
     "jquery": "^3.0.0",
-    "ng-contenteditable-master": ""
+    "ng-contenteditable": "*",
+    "angular-drag-and-drop-lists": "^1.4.0",
+    "underscore": "^1.8.3",
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.7"
   },
   "authors": [
     "Luda <lydmilazoloto@gmail.com>"

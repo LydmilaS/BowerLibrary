@@ -1,45 +1,17 @@
-<!DOCTYPE html>
-<html>
+
+<!doctype html>
+<html lang="en" ng-app="myApp">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="style.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/ng-contenteditable-master/ng-contenteditable.js"></script>
-     <script src="bower_components/ngDraggable-master/ngDraggable.js"></script>
+    <meta charset="utf-8">
+    <title>Angular App</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body ng-app="myApp">
-    <div ng-controller="myCtrl">
-      <div class="block1">
-        <span>In progress</span>
-		      <ul>
-    			  <li ng-repeat="todo in list1"> 
-    				 <p contenteditable="true">{{todo.title}}</p>
-             <p contenteditable="true">{{todo.logWork}}</p>
-             <p contenteditable="true">{{todo.assessment}}</p>
-             <button ng-click="remove()">x</button>
-    			</li>
-		     </ul>
-    <button ng-click="addTodo()">+Add list</button>
-  </div>
-  <div class="block2">
-    <span>Ready to test</span>
-  </div>
-  <div class="block3">
-    <span>Tested</span>
-  </div>
-  <div class="block3">
-   <span>Trash</span>
-    
-    
-  </div>
-  
-    <script src="todo.js"></script>
-    </div>
+  <body>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/ng-contenteditable/ng-contenteditable.js"></script>
+    <script src="bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js"></script>
   </body>
-  
 </html>
