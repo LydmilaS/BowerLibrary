@@ -2,16 +2,29 @@
 <!doctype html>
 <html lang="en" ng-app="myApp">
   <head>
-    <meta charset="utf-8">
-    <title>Angular App</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="style.css" />
+      <meta charset="utf-8">
+      <title>Angular App</title>
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="style.css" />
+      <script src="bower_components/angular/angular.min.js"></script>
+      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="bower_components/ng-contenteditable/ng-contenteditable.js"></script>
+      <script src="bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js"></script>
+      <script src="bower_components/angular-route/angular-route.min.js"></script>
+      <script src="controllers/mainController.js"></script>
+      <script src="directives/sheet.js"></script>
+      <script src="main.js"></script>
   </head>
   <body>
+  <div ng-controller="mainController">
+      <div class="column col-md-3" ng-repeat="column in columns">
+          <h1 class="column-title">{{ column.title }}</h1>
+          <list-sheet sheet-data="column"></list-sheet>
+          <button ng-click="column.addSheet()" class="btn btn-primary" ng-show="column.editable">
+              <i class="glyphicon glyphicon-plus"></i> Add list
+          </button>
+      </div>
+  </div>
 
-  <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/ng-contenteditable/ng-contenteditable.js"></script>
-    <script src="bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js"></script>
   </body>
 </html>

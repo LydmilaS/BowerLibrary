@@ -1,0 +1,10 @@
+<ul>
+    <li ng-repeat="x in  sheetData.sheets">
+        <p>{{x.title}}</p>
+        <p>{{x.content}}</p>
+        <p>{{x.time}}</p>
+        <i class="glyphicon glyphicon-remove remove-sheet text-danger"
+           ng-click="sheetData.sheets.splice($index, 1);">
+        </i>
+    </li>
+</ul>
