@@ -1,0 +1,67 @@
+.column,
+.trash {
+    padding: 10px;
+    text-align: center;
+}
+
+.wrap {
+    border-radius: 5px;
+    min-height: 95vh !important;
+    background: #F1F1F1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.sheet {
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    background: #FBFBFB;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.sheet p {
+    min-height: 20px;
+}
+
+p, h1 {
+    padding-bottom: 5px;
+    border-bottom: 3px solid #42cdf6;
+}
+
+.remove-sheet,
+.edit-sheet-icon {
+    position: absolute !important;
+    right: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.edit-sheet-icon {
+    right: 30px;
+}
+
+.dndDragover .wrap {
+    border: 2px double #42cdf6;
+}
+
+li.dndPlaceholder {
+    list-style-type: none;
+}
+
+.edite-mode {
+    border-bottom: 3px dashed #42cdf6;
+}

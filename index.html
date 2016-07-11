@@ -14,15 +14,29 @@
       <script src="controllers/mainController.js"></script>
       <script src="directives/sheet.js"></script>
       <script src="main.js"></script>
+      <script src="app-contenteditable.js"></script>
   </head>
   <body>
   <div ng-controller="mainController">
-      <div class="column col-md-3" ng-repeat="column in columns">
+      <div class="column col-md-3" ng-repeat="column in columns" dnd-list="column.sheets">
+          <div class="wrap">
           <h1 class="column-title">{{ column.title }}</h1>
           <list-sheet sheet-data="column"></list-sheet>
           <button ng-click="column.addSheet()" class="btn btn-primary" ng-show="column.editable">
               <i class="glyphicon glyphicon-plus"></i> Add list
           </button>
+      </div>
+      </div>
+      <div class="trash col-md-3" dnd-list="trash.sheets">
+          <div class="wrap">
+              <h1 class="column-title">{{ trash.title }}</h1>
+              <div>In thrash {{ trash.sheets.length }} sheets</div>
+              <div ng-show="trash.sheets.length > 0">
+                  <button class="btn btn-primary" ng-click="trash.removeAllSheets()">
+                      <i class="glyphicon glyphicon-trash"></i> Remove all
+                  </button>
+              </div>
+          </div>
       </div>
   </div>
 

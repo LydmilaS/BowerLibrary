@@ -1,8 +1,15 @@
 <ul>
-    <li ng-repeat="x in  sheetData.sheets">
-        <p>{{x.title}}</p>
-        <p>{{x.content}}</p>
-        <p>{{x.time}}</p>
+    <li ng-repeat="sheet in  sheetData.sheets" class="sheet" dnd-draggable="sheet"
+        dnd-effect-allowed="move"
+        dnd-moved="sheetData.sheets.splice($index, 1)"
+        dnd-selected="models.selected = sheet">
+        <p contenteditable="{{sheet.sheetEditable}}" ng-dblclick="sheet.sheetEditable = !sheet.sheetEditable;" ng-model="sheet.title" ng-class="{'edite-mode': sheet.sheetEditable}">{{sheet.title}}</p>
+        <p contenteditable="{{sheet.sheetEditable}}" ng-dblclick="sheet.sheetEditable = !sheet.sheetEditable;" ng-model="sheet.content" ng-class="{'edite-mode': sheet.sheetEditable}">{{sheet.content}}</p>
+        <p contenteditable="{{sheet.sheetEditable}}" ng-dblclick="sheet.sheetEditable = !sheet.sheetEditable;" ng-model="sheet.time" ng-class="{'edite-mode': sheet.sheetEditable}">{{sheet.time}}</p>
+        <i class="glyphicon  edit-sheet-icon"
+           ng-class="{'glyphicon-edit text-primary': !sheet.sheetEditable,'glyphicon-ok text-success': sheet.sheetEditable}"
+           ng-click="sheet.sheetEditable = !sheet.sheetEditable;">
+        </i>
         <i class="glyphicon glyphicon-remove remove-sheet text-danger"
            ng-click="sheetData.sheets.splice($index, 1);">
         </i>
