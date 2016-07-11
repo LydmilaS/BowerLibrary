@@ -56,6 +56,11 @@ p, h1 {
 
 .dndDragover .wrap {
     border: 2px double #42cdf6;
+    background-color: #3a87ad;
+}
+
+.dndDragover .wrap h1 {
+    color: white;
 }
 
 li.dndPlaceholder {

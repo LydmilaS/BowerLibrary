@@ -17,10 +17,6 @@ function Column(title) {
         this.sheets.push(new Sheet(title, content, time));
     };
 
-    this.toggleVisibleSheets = function () {
-        this.visibleSheets = !this.visibleSheets;
-    };
-
     this.removeAllSheets = function () {
         var confirmDelete = window.confirm('Remove all?');
         if(confirmDelete){
